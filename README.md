@@ -6,13 +6,14 @@
 - ✅ 标准化的 Issue/PR 模板与代码所有者配置。
 - ✅ 内置 GitHub Actions 工作流：YAML 语法校验、Super Linter 基础检查。
 - ✅ Dependabot 自动更新 GitHub Actions 依赖。
+- ✅ CodeQL 安全扫描工作流与中文使用指南。
 - ✅ Copilot 配置、Custom Instructions 模板与提示语库，支持中文团队协作。
 - ✅ 完整的仓库初始化清单、安全基线、分支策略与流程文档。
 
 ## 快速开始
 1. 使用此仓库作为模版创建新仓库。
 2. 按照 `docs/github/repo-setup-checklist.md` 完成初始化配置。
-3. 根据实际项目调整 `.github/workflows/`、`dependabot.yml` 和 `.copilot/config.json`。
+3. 根据实际项目调整 `.github/workflows/`（包括 `ci.yml`、`codeql.yml` 等）、`dependabot.yml` 与 `.copilot/config.json`。
 4. 参考 `docs/ai/custom-instructions.md` 在 Copilot 客户端配置个人 Custom Instructions。
 5. 阅读 `docs/ai`、`docs/github` 与 `docs/process`，了解建议流程与最佳实践。
 
@@ -22,6 +23,8 @@
 - 项目流程管理：`docs/process/`
 - 贡献与行为准则：`CONTRIBUTING.md`、`CODE_OF_CONDUCT.md`
 
+> 推荐优先阅读 `docs/github/codeql-usage.md`，了解如何为项目配置 CodeQL。
+
 ## 适配建议
 - 若项目包含特定技术栈，可在 `.github/workflows/` 中追加对应的构建/测试工作流。
 - 根据组织安全策略扩展 `docs/github/security-baseline.md`。
@@ -30,6 +33,6 @@
 ## 后续计划
 - [ ] 添加常见语言（Node.js、Python 等）的一键构建工作流示例。
 - [ ] 提供更丰富的 Copilot 场景提示。
-- [ ] 集成更多安全扫描工具（如 CodeQL）。
+- [ ] 拓展更多安全扫描场景（如基础设施即代码、容器镜像）。
 
 欢迎通过 Issue 与 Pull Request 贡献改进意见，与我们一起完善这个模版！

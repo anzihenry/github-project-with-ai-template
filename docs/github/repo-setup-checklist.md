@@ -22,6 +22,7 @@
 - [ ] 启用 Dependabot Alerts、Secret Scanning、Push Protection（若计划支持），并确认通知接收人。
 - [ ] 审查第三方 GitHub Actions，固定版本为带 SHA 的引用或稳定 tag。
 - [ ] 建立必需的 GitHub Secrets，限制权限并记录轮换计划。
+- [ ] 参考 `docs/github/codeql-usage.md` 启用并验证 `codeql.yml` 工作流，确保默认分支定期完成扫描。
 
 ## Copilot 与 AI 配置
 - [ ] 根据团队需求调整 `.copilot/config.json` 的指南、风格与作用域。

@@ -22,6 +22,7 @@
   - Dependabot alerts
   - Secret scanning
   - Push Protection（如组织或企业版可用）
+- 启用 CodeQL Code Scanning，并确保 `.github/workflows/codeql.yml` 运行成功、告警及时处理。
 - 将安全通知与团队协作工具集成，确保及时处理。
 - 制定安全事件处理流程，参考 `SECURITY.md` 中的联系方式。
 
@@ -33,4 +34,5 @@
 ## 持续改进
 - 将安全基线纳入 `docs/process/release-management.md` 的发布检查中。
 - 每次版本发布前执行一次安全基线回顾，确保配置未偏离。
+- 定期审查 CodeQL 告警，记录趋势并在回顾中总结改进方案。
 - 鼓励团队提交安全改进建议，并通过 Issue 跟踪落实。
