@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 常见问题解答
+    url: https://github.com/your-org/your-repo#readme
+    about: 模版使用常见问题与说明（使用前请替换为实际链接）。

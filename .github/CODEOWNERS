@@ -1,0 +1,3 @@
+# 将代码所有者映射到路径，确保评审流程顺畅。
+# 使用说明：将 @your-team/maintainers 替换为实际的 GitHub 用户或团队。
+* @your-team/maintainers

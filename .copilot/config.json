@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "project": "GitHub 项目模版",
+  "guidelines": [
+    "优先输出中文文档与注释，保持术语一致性。",
+    "在给出命令时，请使用 zsh 兼容的写法并避免未验证的命令。",
+    "变更公共接口时，应同步更新文档与测试建议。"
+  ],
+  "scopes": [
+    {
+      "patterns": ["**/*.md"],
+      "style": ["语气友好且专业", "提供清晰的步骤与上下文"],
+      "summary": "Markdown 文档需要清晰地指导用户使用模版。"
+    },
+    {
+      "patterns": [".github/workflows/**/*.yml"],
+      "style": ["遵守 GitHub Actions 官方文档示例", "提供必要注释"],
+      "summary": "工作流需易于维护，并提供最小可行的默认校验。"
+    }
+  ],
+  "default_prompts": [
+    {
+      "name": "评审清单",
+      "goal": "请根据仓库约定生成 Pull Request 评审要点列表。",
+      "context": [
+        "阅读 CONTRIBUTING.md",
+        "结合 docs/process/project-lifecycle.md"
+      ]
+    }
+  ]
+}
