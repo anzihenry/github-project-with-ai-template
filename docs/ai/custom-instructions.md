@@ -1,0 +1,64 @@
+# Custom Instructions 配置指南
+
+> 本指南帮助你在 GitHub Copilot 客户端（VS Code、Copilot Chat 网页版等）中配置个人 Custom Instructions，并与仓库内的 `.copilot/` 约定协同工作。
+
+## 为什么需要 Custom Instructions？
+- **个人偏好声明**：描述你的首选语言、输出格式、常见命令等，减少重复说明。
+- **补充项目规范**：当 `.copilot/config.json` 给出了团队共识时，Custom Instructions 可以补充你的角色职责或常见场景。
+- **跨项目复用**：即使离开该仓库，你的个性化设定仍会在其他项目中生效。
+
+## 设置步骤
+### VS Code 客户端
+1. 打开命令面板（`Ctrl/Cmd + Shift + P`），输入 “Copilot: Open Custom Instructions”。
+2. 在弹出的面板中填写“你希望 Copilot 了解你的信息”和“你希望 Copilot 如何回复”两个文本框。
+3. 粘贴或调整下方提供的模板，保存后即刻生效。
+
+### GitHub.com Copilot Chat（网页版）
+1. 打开 [https://github.com/copilot](https://github.com/copilot) 并登录。
+2. 在左侧导航中选择 **Custom Instructions**。
+3. 填写或更新文本框内容，点击保存。
+
+> 无论在哪个平台配置，内容都会同步到你的 Copilot 账户，对所有编辑器生效。
+
+## 推荐填写模板
+### 1. 个人偏好（“Copilot 需要知道的关于你的一切”）
+```
+我主要使用中文交流，偏好简洁的命令与说明。
+常用技术栈：GitHub Actions、Markdown 文档以及此模板仓库推荐的流程。
+请默认遵循仓库内的 `docs/` 文档，若有冲突以仓库规范为准。
+在生成命令时，请确保适用于 macOS + zsh 环境。
+```
+
+### 2. 期望 Copilot 的回复方式（“你希望 Copilot 如何回应”）
+```
+请采用中文回答，语气友好、结构清晰，优先给出可执行步骤。
+输出时按照仓库 `.copilot/config.json` 的提示执行：
+- Markdown 中提供明确的小节或列表。
+- 涉及工作流或配置时补充背景说明与注意事项。
+- 变更公共接口或文档时提醒同步更新测试/文档。
+如遇不确定的内容，请列出你需要的额外信息。
+```
+
+你可以根据自身职责添加更多细节（例如负责安全审查、偏好某种日志格式等）。
+
+## 与 `.copilot/config.json` 的协同
+- 仓库配置属于“团队共识”，Custom Instructions 属于“个人补充”；两者并行生效。
+- 如有冲突，Copilot 会尝试综合处理，但建议在个人指令中明确“以仓库规范为准”。
+- 当 `.copilot/config.json` 更新后，请及时检查个人指令是否需要调整。
+
+## 团队协作建议
+- 在 `docs/github/repo-setup-checklist.md` 完成仓库初始化时，提醒新成员参考本指南配置个人指令。
+- 鼓励成员在 `docs/ai/prompt-library.md` 中贡献常用提示语，便于相互学习。
+- 若团队角色分工明确，可在 Custom Instructions 中记录各自负责的模块或审批要求。
+
+## 常见问题
+- **问：是否可以导出或复用模板？**
+  - 目前官方未提供脚本化导入导出功能，建议将推荐文本存放在仓库文档中，供成员手动复制。
+- **问：多语言团队如何处理？**
+  - 可要求每位成员在个人指令中标注使用语言，并在仓库指令中指明默认语言；必要时维护英文版模板。
+- **问：如何验证指令生效？**
+  - 在 Copilot Chat 中询问“你对我有哪些了解？”或“请按照仓库要求生成 PR 模板说明”观察回复是否符合预期。
+
+## 维护与更新
+- 在发布新版本或调整流程时，记得同步更新本文件与示例文本。
+- 将更新记录在 `docs/process/release-management.md` 的发布清单中，确保团队成员知悉。

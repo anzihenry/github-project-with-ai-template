@@ -5,6 +5,11 @@
 - 建议在组织或团队范围内同步此配置，确保生成内容保持一致。
 - 若仓库语言多样，可在 `scopes` 中针对不同文件类型编写差异化指引。
 
+### Custom Instructions
+- Custom Instructions 属于个人层面的补充配置，可在 VS Code 或 Copilot Chat 网页端设置。
+- 推荐参照 `docs/ai/custom-instructions.md` 提供的模板填写，并在内容中声明“以仓库规范为准”。
+- 当 `.copilot/config.json` 更新或团队流程调整时，请同步校准个人指令，以免冲突。
+
 ## 日常使用建议
 1. **明确上下文**：在提问或生成代码前，简要描述业务背景与预期输出。
 2. **迭代验证**：对 Copilot 生成的结果进行审阅，必要时通过补充提示进行迭代。

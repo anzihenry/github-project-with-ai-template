@@ -6,14 +6,15 @@
 - ✅ 标准化的 Issue/PR 模板与代码所有者配置。
 - ✅ 内置 GitHub Actions 工作流：YAML 语法校验、Super Linter 基础检查。
 - ✅ Dependabot 自动更新 GitHub Actions 依赖。
-- ✅ Copilot 配置与提示语库，支持中文团队协作。
+- ✅ Copilot 配置、Custom Instructions 模板与提示语库，支持中文团队协作。
 - ✅ 完整的仓库初始化清单、安全基线、分支策略与流程文档。
 
 ## 快速开始
 1. 使用此仓库作为模版创建新仓库。
 2. 按照 `docs/github/repo-setup-checklist.md` 完成初始化配置。
 3. 根据实际项目调整 `.github/workflows/`、`dependabot.yml` 和 `.copilot/config.json`。
-4. 阅读 `docs/ai`、`docs/github` 与 `docs/process`，了解建议流程与最佳实践。
+4. 参考 `docs/ai/custom-instructions.md` 在 Copilot 客户端配置个人 Custom Instructions。
+5. 阅读 `docs/ai`、`docs/github` 与 `docs/process`，了解建议流程与最佳实践。
 
 ## 文档导航
 - GitHub 配置指南：`docs/github/`
