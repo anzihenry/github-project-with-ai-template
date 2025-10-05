@@ -51,6 +51,7 @@
 - 对所有自动生成的内容进行自查，避免包含个人身份信息、机器名、API Token 或本地文件路径等敏感内容。
 - 若必须引用本地路径或命令示例，请将其中的用户名、主机名等替换为 `<USER>`、`<HOST>` 等占位符。
 - 当发现生成结果中仍包含敏感信息时，请及时手动编辑或使用脚本清理后再提交。
+- 仓库 CI 已集成 `.github/scripts/check_sensitive_info.py`，提交前本地可运行 `python3 .github/scripts/check_sensitive_info.py` 预先检查。
 - 如需团队级规范，可在仓库 `.copilot/` 配置或其他文档中补充更严格的过滤要求，并在 Custom Instructions 中说明优先级。
 
 ## 团队协作建议

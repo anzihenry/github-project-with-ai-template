@@ -21,6 +21,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: 检查本机隐私信息泄露
+        run: python3 .github/scripts/check_sensitive_info.py
+
       - name: 运行 Super Linter
         uses: super-linter/super-linter/slim@v7
         env:
