@@ -20,6 +20,7 @@
   - `@workspace /explain` 获取当前文件或目录概览。
   - `@workspace /tests` 生成或完善验证用例。
 - 使用 `docs/ai/prompt-library.md` 中的标准提示，以便重复使用。
+- 若需要规格驱动开发流程，可参照 `docs/ai/spec-kit-integration.md` 引入 Spec Kit 并结合 `/specify`、`/plan` 等指令。
 
 ## 常见场景
 | 场景 | 建议提示 | 注意事项 |
