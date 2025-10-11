@@ -1,27 +1,27 @@
-# 安全策略
+# Security Policy
 
-感谢你关注此模版的安全性。为保护使用者的项目，我们建议遵循以下流程。
+Thank you for caring about the security of this template. Follow the guidance below to protect projects built on top of it.
 
-## 漏洞报告
-- 请将疑似安全问题发送至安全邮箱：`security@example.com`（使用前请替换为真实地址）。
-- 邮件中请包含：问题描述、复现步骤、潜在影响、建议修复方式（如有）。
-- 我们将在 72 小时内确认收到，并在 7 个工作日内给出初步回应。
+## Reporting a Vulnerability
+- Email suspected security issues to `security@example.com` (replace with the actual mailbox before use).
+- Include a description, reproduction steps, potential impact, and any remediation ideas you may have.
+- Expect an acknowledgement within 72 hours and an initial response within 7 business days.
 
-## 支持范围
-- 仓库内的配置文件与工作流。
-- 文档中推荐的自动化或脚本。
-- 与 Copilot 配置相关的安全考量。
+## In-Scope Assets
+- Configuration files and workflows contained in this repository.
+- Automation or scripts recommended in the documentation.
+- Security considerations related to the Copilot configuration.
 
-## 不在范围内
-- 使用者在自己项目中引入的第三方依赖或服务。
-- 使用者自行修改或扩展后引入的安全风险。
+## Out-of-Scope Items
+- Third-party dependencies or services added by downstream projects.
+- Security issues introduced through custom modifications beyond this template.
 
-## 负责任披露
-在问题修复或缓解前，请勿公开披露漏洞细节。我们将在修复完成后发布安全公告，并感谢报告者的贡献。
+## Responsible Disclosure
+Please do not publicly disclose details before a fix or mitigation is available. Once resolved, we will publish a security notice and credit reporters appropriately.
 
-## 最佳实践建议
-- 启用 GitHub 的安全功能：Secret Scanning、Dependabot Alerts、CodeQL（如适用）。
-- 为仓库设置最小权限的 PAT / GitHub App。
-- 定期审查 GitHub Actions 中使用的第三方 Action 版本。
+## Best Practices
+- Enable GitHub safeguards such as Secret Scanning, Dependabot Alerts, and CodeQL where applicable.
+- Use least-privilege PATs or GitHub Apps for this repository.
+- Review third-party GitHub Actions versions regularly.
 
-感谢你的配合，帮助我们构建更安全的模版生态。
+Thank you for helping us maintain a secure template ecosystem.

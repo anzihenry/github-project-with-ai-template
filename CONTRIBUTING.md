@@ -1,29 +1,29 @@
-# 贡献指南
+# Contribution Guide
 
-感谢你愿意为此 GitHub 项目模版贡献力量！以下步骤与建议可帮助你快速上手并保持贡献的一致性。
+Thank you for helping improve this GitHub project template! Follow the steps below to get started quickly and keep contributions consistent.
 
-## 基础要求
-- 阅读 `README.md` 与 `docs/github/repo-setup-checklist.md` 了解模版结构。
-- 保持所有文档使用中文撰写，确保术语统一。
-- 在提交 Pull Request 前，请先创建或关联对应的 Issue。
+## Baseline Expectations
+- Review `README.md` and `docs/github/repo-setup-checklist.md` to understand the repository layout.
+- Keep documentation updates in English and ensure terminology stays consistent.
+- Open or link to a relevant issue before submitting a pull request.
 
-## 开发流程
-1. Fork 或克隆仓库，建议使用独立分支进行修改。
-2. 如需新增配置，请确保同时更新相关文档（例如 `docs/ai`、`docs/process`）。
-3. 完成修改后，运行必要的校验（例如 `act` 运行 GitHub Actions、本地 linter 等）。
-4. 提交 Pull Request 时，遵循 `.github/PULL_REQUEST_TEMPLATE.md` 中的清单，并确保 CI 通过。
+## Development Workflow
+1. Fork or clone the repository and work from a dedicated feature branch.
+2. When adding or changing configuration, update the relevant documentation (for example `docs/ai`, `docs/process`).
+3. Run the required checks before opening a pull request (GitHub Actions locally with `act`, linters, tests, etc.).
+4. When submitting a pull request, follow the checklist in `.github/PULL_REQUEST_TEMPLATE.md` and ensure CI pipelines pass.
 
-## 代码与文档风格
-- 配置文件尽可能添加注释或链接，解释关键参数。
-- Markdown 文档使用二级标题划分段落，并提供简洁的列表说明。
-- 对于 Copilot 相关文件，请参考 `docs/ai/copilot-guidelines.md`。
+## Code and Documentation Style
+- Add comments or reference links to configuration files when parameters need clarification.
+- Organize Markdown with second-level headings and concise bullet lists.
+- For Copilot-related content, align with the practices in `docs/ai/copilot-guidelines.md`.
 
-## Issue 与讨论
-- 使用模板提交 Issue，并提供必要上下文与重现步骤。
-- 对于功能建议，请说明业务背景与潜在收益。
+## Issues and Discussions
+- Use the provided issue templates and include context plus reproduction steps when reporting defects.
+- For feature proposals, describe the business background and expected benefits.
 
-## 发布与版本
-- 模版的版本发布将通过 GitHub Releases 管理，变更记录见 `docs/process/release-management.md`。
-- 新增重大功能时，请附带迁移或升级指引。
+## Releases and Versioning
+- Releases are managed via GitHub Releases; track changes in `docs/process/release-management.md`.
+- When introducing major functionality, document migration or upgrade guidance.
 
-如果你对贡献流程有疑问，可在讨论区发起话题或提交 Issue。再次感谢你的支持！
+If anything about the contribution process is unclear, start a discussion or open an issue. Thanks again for your support!

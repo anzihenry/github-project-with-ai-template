@@ -1,26 +1,26 @@
-# 分支策略建议
+# Branch Strategy Guidelines
 
-## 主分支
-- `main`（或 `master`）作为稳定发布分支，仅通过 Pull Request 合并。
-- 启用分支保护：要求至少一名 reviewer 通过，禁止直接推送。
-- 将 CI 工作流设为必需状态检查，确保质量可控。
+## Main Branch
+- Treat `main` (or `master`) as the stable release branch and merge via pull requests only.
+- Enable branch protection: require at least one reviewer approval and disallow direct pushes.
+- Mark CI workflows as required status checks to safeguard quality.
 
-## 功能分支
-- 命名规范：`feature/<简短描述>`。
-- 建议保持生命周期短，合并后及时删除远程分支。
-- 若涉及跨团队协作，可在 Issue 中声明负责人与评审范围。
+## Feature Branches
+- Naming convention: `feature/<concise-description>`.
+- Keep feature branches short-lived and delete them after merging.
+- For cross-team efforts, clarify owners and review scope within the related issue.
 
-## 修复分支
-- 命名规范：`fix/<问题编号>` 或 `hotfix/<描述>`。
-- 对于紧急修复，确保在 PR 中附带回滚方案。
-- 修复完成后，将变更同步回 `develop` 或其他长期分支。
+## Fix Branches
+- Naming convention: `fix/<issue-number>` or `hotfix/<summary>`.
+- Include a rollback plan in urgent fix pull requests.
+- After the fix merges, sync the change back to `develop` or other long-lived branches.
 
-## 发布分支（可选）
-- 命名规范：`release/<版本号>`。
-- 用于冻结本轮发布的功能，进行最终测试与文档完善。
-- 发布完成后，合并回主分支与开发分支，并打上标签。
+## Release Branches (Optional)
+- Naming convention: `release/<version>`.
+- Freeze features targeted for the release, complete final testing, and polish documentation.
+- Upon release, merge the branch into both the main branch and the long-lived development branch, then tag the release.
 
-## 工作流建议
-- 所有分支遵循 Pull Request 流程，确保变更透明可追踪。
-- 使用标签（如 `feat`、`fix`、`docs`）标注 PR 目的，便于后续回顾。
-- 在 `docs/process/release-management.md` 中记录每次发布的分支策略与经验教训。
+## Workflow Tips
+- Use the pull request process for every branch to ensure changes stay transparent and auditable.
+- Label PRs with purpose-driven tags (e.g., `feat`, `fix`, `docs`) to simplify retrospectives.
+- Capture branch strategy outcomes and lessons learned in `docs/process/release-management.md` for future reference.

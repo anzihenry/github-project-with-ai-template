@@ -1,19 +1,18 @@
----
-name: "功能建议"
-about: "提交一个改进或新功能的想法"
+name: "Feature Request"
+about: "Propose an improvement or new capability"
 title: "[Feature] "
 labels: [enhancement]
 assignees: []
 ---
 
-## 背景与动机
-描述你希望解决的问题或达成的目标。
+## Background & Motivation
+Describe the problem you want to solve or the goal you want to achieve.
 
-## 解决方案设想
-简单描述你对功能实现的设想或建议。
+## Proposed Solution
+Outline your idea for how the feature could work or be implemented.
 
-## 可选方案
-如果存在其他可行路径，请在此列出并说明优缺点。
+## Alternatives
+List any alternative approaches and summarize their pros and cons.
 
-## 相关上下文
-补充任何链接、参考资料或额外信息，帮助我们理解需求。
+## Additional Context
+Provide links, references, or extra details that help us understand the request.

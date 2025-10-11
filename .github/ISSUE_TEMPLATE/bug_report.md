@@ -1,25 +1,24 @@
----
-name: "缺陷反馈"
-about: "报告一个问题，帮助我们改进此模版"
+name: "Bug Report"
+about: "Report a problem so we can improve this template"
 title: "[Bug] "
 labels: [bug]
 assignees: []
 ---
 
-## 描述问题
-清晰地描述出现了什么问题，以及你原本预期的行为。
+## Problem Description
+Provide a clear summary of what went wrong and what you expected to happen instead.
 
-## 复现步骤
+## Steps to Reproduce
 1. 
 2. 
 3. 
 
-## 环境信息
-- 操作系统：
-- 相关依赖或工具版本：
+## Environment Details
+- Operating system:
+- Relevant dependencies or tool versions:
 
-## 日志/截图
-如有日志、错误信息或截图，请在此粘贴或上传。
+## Logs / Screenshots
+Paste or upload any logs, error messages, or screenshots that help illustrate the issue.
 
-## 额外说明
-补充任何有助于定位问题的背景信息。
+## Additional Context
+Share any background information that may help us diagnose the problem.

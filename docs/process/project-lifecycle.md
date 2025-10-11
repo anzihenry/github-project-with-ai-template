@@ -1,36 +1,36 @@
-# 项目生命周期流程
+# Project Lifecycle Workflow
 
-本流程帮助维护团队在使用模版时保持一致的开发节奏与质量控制。
+Use this workflow to keep development pace and quality control consistent when working with the template.
 
-## 1. 需求与规划
-- 收集需求：使用 Issue 模板记录背景、目标与验收标准。
-- 排期计划：在项目看板或 Milestone 中安排优先级。
-- 技术评估：识别依赖、潜在风险与 Copilot 支持需求。
-- 确认提交规范：团队达成共识并参照 `docs/github/commit-message-guidelines.md`。
+## 1. Requirements & Planning
+- Capture requirements: log background, goals, and acceptance criteria with the issue templates.
+- Prioritize work: plan milestones or build a project board.
+- Assess technology: identify dependencies, risks, and Copilot assistance needs.
+- Confirm commit standards: align as a team using `docs/github/commit-message-guidelines.md`.
 
-## 2. 开发阶段
-- 创建功能分支并关联 Issue。
-- 遵循 `CONTRIBUTING.md` 中的编码与文档规范。
-- 充分利用 `docs/ai/prompt-library.md` 提供的提示，加速开发。
+## 2. Development Phase
+- Create feature branches and link them to the relevant issues.
+- Follow the coding and documentation conventions in `CONTRIBUTING.md`.
+- Leverage prompts in `docs/ai/prompt-library.md` to streamline development.
 
-## 3. 评审与集成
-- 提交 Pull Request，填写 `.github/PULL_REQUEST_TEMPLATE.md` 中的内容。
-- 评审关注代码质量、安全与流程一致性。
-- 确认 CI/CD 状态检查全部通过。
+## 3. Review & Integration
+- Open pull requests and complete the checklist in `.github/PULL_REQUEST_TEMPLATE.md`.
+- Review for code quality, security, and process alignment.
+- Ensure all CI/CD checks pass before merging.
 
-## 4. 测试与验证
-- 根据项目性质执行自动化测试、手动验证或灰度发布。
-- 记录测试结果，必要时在 PR 中提供验证证据。
-- 若发现问题，及时反馈并协作修复。
+## 4. Testing & Verification
+- Run automated tests, manual checks, or canary deployments as appropriate.
+- Document test evidence and, when needed, attach it to the pull request.
+- Surface issues quickly and coordinate fixes collaboratively.
 
-## 5. 发布与交付
-- 参考 `docs/process/release-management.md` 准备发布说明。
-- 使用标签或 Release 记录版本号、关键变更与升级步骤。
-- 通知相关团队或用户，提供部署操作指引。
+## 5. Release & Delivery
+- Prepare release notes using `docs/process/release-management.md`.
+- Tag the release and capture key changes plus upgrade guidance.
+- Inform stakeholders or users and supply deployment instructions.
 
-## 6. 维护与复盘
-- 发布后监控指标与反馈，评估上线效果。
-- 定期回顾项目流程，更新清单与指南。
-- 将经验记录到 `docs/process/` 目录，帮助未来项目复用。
+## 6. Maintenance & Retrospective
+- Monitor metrics and feedback after release to evaluate impact.
+- Revisit process documentation regularly and keep checklists current.
+- Record lessons learned in `docs/process/` to benefit future projects.
 
-通过以上步骤，团队能够在不同项目中复用且持续优化模版流程。
+Following these steps helps teams reuse and continuously refine the template across initiatives.

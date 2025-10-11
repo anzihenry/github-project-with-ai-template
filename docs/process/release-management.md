@@ -1,35 +1,35 @@
-# 发布管理流程
+# Release Management Workflow
 
-此文档定义使用模版进行版本发布的标准流程，确保变更可追溯、可回滚。
+Use this workflow to ensure releases remain traceable and reversible when shipping from the template.
 
-## 发布前准备
-- [ ] 确认本次发布范围：整理已合并的 Issue 与 Pull Request。
-- [ ] 检查 CI/CD 状态：确保关联工作流均为绿色。
-- [ ] 复核安全基线：参考 `docs/github/security-baseline.md`，确认配置未偏离。
-- [ ] 查看 CodeQL 扫描结果：无未解决的高/中风险告警或已制定处理计划。
-- [ ] 更新文档：完善 README、变更日志、部署说明等。
+## Pre-Release Checklist
+- [ ] Define the release scope by collecting merged issues and pull requests.
+- [ ] Verify CI/CD pipelines are green.
+- [ ] Revisit the security baseline via `docs/github/security-baseline.md` to make sure configurations stay aligned.
+- [ ] Review CodeQL scan results and confirm no unresolved high/medium alerts remain—or that remediation plans exist.
+- [ ] Update documentation, including the README, changelog, and deployment notes.
 
-## 发布步骤
-1. **创建发布分支（可选）**：`release/<版本号>`。
-2. **版本号归档**：按照语义化版本或团队约定更新标签。
-3. **准备发布说明**：
-   - 关键变更与亮点
-   - 破坏性改动与迁移步骤
-   - 安全修复与风险提示
-4. **创建 Release**：在 GitHub Release 页面附上说明，上传附加资源（如有）。
-5. **通知相关方**：通过团队沟通渠道广播，并链接到 Release 页面。
+## Release Steps
+1. **Create a release branch (optional)**: `release/<version>`.
+2. **Tag the version**: follow semantic versioning or the team’s chosen scheme.
+3. **Prepare release notes**:
+   - Key changes and highlights
+   - Breaking changes and migration steps
+   - Security fixes and risk considerations
+4. **Publish the release**: add notes on the GitHub Release page and upload assets if needed.
+5. **Notify stakeholders**: broadcast through team channels and link to the release entry.
 
-## 发布后跟进
-- 监控关键指标或用户反馈，及时响应问题。
-- 将经验记录到 `docs/process/post-release-retro.md`（如需新建）。
-- 若发生严重问题，按预案执行回滚。
-- 回顾提交历史：确认遵循 `docs/github/commit-message-guidelines.md`，便于生成变更日志与复盘。
+## Post-Release Follow-up
+- Monitor key metrics or user feedback and respond promptly.
+- Record lessons learned in `docs/process/post-release-retro.md` (create it if necessary).
+- Execute rollback plans if critical issues surface.
+- Review commit history to ensure it follows `docs/github/commit-message-guidelines.md`, simplifying changelog generation and retrospectives.
 
-## 回滚策略
-- 使用 Git 标签快速定位上一个稳定版本。
-- 记录回滚原因、影响范围与修复计划。
-- 在 Issue 或讨论中总结教训，并更新本流程。
+## Rollback Strategy
+- Use Git tags to locate the last stable version quickly.
+- Document the cause, impact, and remediation plan for the rollback.
+- Summarize takeaways in an issue or discussion and update this workflow when needed.
 
-## 定期维护
-- 每季度审查发布流程的适用性与效率，必要时更新文档。
-- 同步检查 Copilot 相关提示与评审清单是否需要调整。
+## Ongoing Maintenance
+- Reassess the release workflow each quarter and revise documentation as required.
+- Confirm Copilot guidance and review checklists stay current.

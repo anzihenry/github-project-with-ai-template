@@ -1,28 +1,28 @@
-# 行为准则
+# Code of Conduct
 
-为营造开放、友善、包容的社区氛围，本仓库采纳以下基本原则：
+To cultivate an open, welcoming, and inclusive community, this repository adopts the following principles:
 
-## 我们的承诺
-- 尊重每一位贡献者，不论其背景、经验或观点。
-- 避免使用冒犯、歧视或骚扰性的言论与行为。
-- 积极回应问题与建议，维护协作氛围。
+## Our Pledge
+- Respect every contributor regardless of background, experience, or perspective.
+- Avoid language or actions that are harassing, discriminatory, or otherwise harmful.
+- Respond to questions and suggestions constructively to maintain a collaborative environment.
 
-## 可接受的行为
-- 使用友好且专业的语言沟通。
-- 尊重不同观点，在讨论中聚焦事实与解决方案。
-- 主动分享知识与资源，帮助他人理解模版的设计初衷。
+## Expected Behavior
+- Communicate in a friendly and professional manner.
+- Respect differing viewpoints and keep discussions focused on facts and solutions.
+- Share knowledge and resources proactively so others can understand the intent behind the template.
 
-## 不可接受的行为
-- 任何形式的骚扰、威胁或歧视言论。
-- 刻意泄露他人隐私信息。
-- 恶意破坏、刷屏或阻碍正常协作。
+## Unacceptable Behavior
+- Any form of harassment, threats, or discriminatory remarks.
+- Intentional disclosure of someone’s private information.
+- Malicious disruption, spamming, or interference with collaboration.
 
-## 责任与执行
-- 维护者负责监控并处理违反行为。
-- 维护者拥有修改、删除不当内容及暂时或永久限制参与者的权利。
-- 针对重大事件，维护者将公开说明处理结果（在尊重隐私的前提下）。
+## Responsibility and Enforcement
+- Maintainers monitor behavior and address violations.
+- Maintainers may edit or remove inappropriate content and temporarily or permanently restrict participation.
+- Significant incidents will be documented with outcomes shared publicly while respecting privacy.
 
-## 反馈渠道
-如遇行为准则相关问题，请通过安全邮箱联系维护团队：`security@example.com`（使用前请替换为实际邮箱）。
+## Reporting
+If you encounter an issue related to this code of conduct, email the maintainers at `security@example.com` (replace with the real address before use).
 
-我们期望每一位参与者都能共同维护积极健康的社区文化。
+We expect everyone to help sustain a positive, healthy community culture.

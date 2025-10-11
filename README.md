@@ -1,39 +1,39 @@
-# GitHub 项目模版
+# GitHub Project Template
 
-此仓库提供一个以 GitHub 自动化与 Copilot 协作为核心的项目模版，帮助你快速启动新项目并保持团队流程一致。
+This repository provides a project template centered on GitHub automation and Copilot collaboration, helping you bootstrap new initiatives quickly while keeping team workflows consistent.
 
-## 功能概览
-- ✅ 标准化的 Issue/PR 模板与代码所有者配置。
-- ✅ 内置 GitHub Actions 工作流：YAML 语法校验、Super Linter 基础检查。
-- ✅ Dependabot 自动更新 GitHub Actions 依赖。
-- ✅ CodeQL 安全扫描工作流与中文使用指南。
-- ✅ Copilot 配置、Custom Instructions 模板与提示语库，支持中文团队协作。
-- ✅ 完整的仓库初始化清单、安全基线、分支策略与流程文档。
+## Feature Highlights
+- ✅ Standardized issue/PR templates and CODEOWNERS configuration.
+- ✅ Built-in GitHub Actions workflows for YAML validation and baseline linting via Super Linter.
+- ✅ Dependabot configuration for automated GitHub Actions dependency updates.
+- ✅ CodeQL security scanning workflow accompanied by English usage guidance.
+- ✅ Copilot configuration, Custom Instructions template, and prompt library tailored for team collaboration.
+- ✅ Comprehensive onboarding collateral: repository setup checklist, security baseline, branch policy, and lifecycle documentation.
 
-## 快速开始
-1. 使用此仓库作为模版创建新仓库。
-2. 按照 `docs/github/repo-setup-checklist.md` 完成初始化配置。
-3. 根据实际项目调整 `.github/workflows/`（包括 `ci.yml`、`codeql.yml` 等）、`dependabot.yml` 与 `.copilot/config.json`。
-4. 参考 `docs/ai/custom-instructions.md` 在 Copilot 客户端配置个人 Custom Instructions。
-5. 阅读 `docs/ai`、`docs/github` 与 `docs/process`，了解建议流程与最佳实践。
+## Quick Start
+1. Use this repository as a template to create your new project.
+2. Complete the initialization tasks listed in `docs/github/repo-setup-checklist.md`.
+3. Adjust `.github/workflows/` (including `ci.yml`, `codeql.yml`, etc.), `dependabot.yml`, and `.copilot/config.json` to fit your stack.
+4. Configure Copilot Custom Instructions following `docs/ai/custom-instructions.md`.
+5. Review the guidance in `docs/ai`, `docs/github`, and `docs/process` to align with the recommended practices.
 
-## 文档导航
-- GitHub 配置指南：`docs/github/`
-- Copilot 使用规范：`docs/ai/`
-- 项目流程管理：`docs/process/`
-- 贡献与行为准则：`CONTRIBUTING.md`、`CODE_OF_CONDUCT.md`
+## Documentation Map
+- GitHub configuration guidance: `docs/github/`
+- Copilot usage and AI collaboration: `docs/ai/`
+- Project lifecycle and operations: `docs/process/`
+- Contribution and conduct policies: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`
 
-> 推荐优先阅读 `docs/github/codeql-usage.md`，了解如何为项目配置 CodeQL。
-> 若需统一提交信息格式，请参考 `docs/github/commit-message-guidelines.md`。
+> Start with `docs/github/codeql-usage.md` for CodeQL setup details.
+> Refer to `docs/github/commit-message-guidelines.md` to standardize commit messages.
 
-## 适配建议
-- 若项目包含特定技术栈，可在 `.github/workflows/` 中追加对应的构建/测试工作流。
-- 根据组织安全策略扩展 `docs/github/security-baseline.md`。
-- 针对多语言团队，可在 `docs` 目录中提供英文摘要或翻译版本。
+## Adaptation Tips
+- Add stack-specific build/test workflows under `.github/workflows/` as needed.
+- Extend `docs/github/security-baseline.md` to reflect your organization’s security policies.
+- Provide localized documentation in the `docs` directory if the team operates in multiple languages.
 
-## 后续计划
-- [ ] 添加常见语言（Node.js、Python 等）的一键构建工作流示例。
-- [ ] 提供更丰富的 Copilot 场景提示。
-- [ ] 拓展更多安全扫描场景（如基础设施即代码、容器镜像）。
+## Roadmap
+- [ ] Supply one-click workflow examples for popular stacks (Node.js, Python, etc.).
+- [ ] Expand the prompt library with more Copilot usage scenarios.
+- [ ] Broaden security scanning coverage (e.g., infrastructure-as-code, container images).
 
-欢迎通过 Issue 与 Pull Request 贡献改进意见，与我们一起完善这个模版！
+Contributions via issues and pull requests are welcome—let’s refine this template together!

@@ -1,52 +1,52 @@
-# Copilot 提示语库
+# Copilot Prompt Library
 
-> 这些提示以中文编写，可直接复制到 Copilot Chat 中使用。根据实际场景调整细节。
+> Copy these prompts directly into Copilot Chat and tailor them to your scenario.
 
-## 基础类
-- **理解文件作用**：
+## Fundamentals
+- **Understand a file’s role**:
   ```
-  请阅读 <文件路径>，总结其主要职责、输入输出以及需要注意的配置项。
+  Read <file path> and summarize its primary responsibilities, inputs/outputs, and configuration nuances to watch.
   ```
-- **生成文档**：
+- **Generate documentation**:
   ```
-  参考仓库现有文档风格，为 <功能/配置> 编写一段中文说明，包含目的、使用步骤和注意事项。
-  ```
-
-## 自动化配置
-- **创建工作流**：
-  ```
-  目标：为模版新增一个 GitHub Actions 工作流，实现 <需求>。
-  约束：
-  - 仅在 <触发条件> 时执行。
-  - 使用官方维护的 Action。
-  - 输出步骤需附中文注释。
-  ```
-- **优化依赖更新策略**：
-  ```
-  请检查 .github/dependabot.yml，建议改进项并生成对应的配置片段，保持注释为中文。
+  Following the repository’s documentation style, draft an English section describing <feature/config>, including purpose, usage steps, and caveats.
   ```
 
-## 评审辅助
-- **Pull Request 检查**：
+## Automation Setup
+- **Create a workflow**:
   ```
-  下方是 PR 描述与关键 diff。请根据仓库的贡献指南与安全策略，列出需要额外确认的要点，并标出潜在风险。
+  Goal: Add a GitHub Actions workflow for <requirement>.
+  Constraints:
+  - Trigger only under <conditions>.
+  - Use officially maintained actions.
+  - Include inline comments explaining each step.
   ```
-- **工作流风险审查**：
+- **Refine dependency update policy**:
   ```
-  请对以下 GitHub Actions 工作流进行安全性评估，说明使用的第三方 Action 是否可信，并提出最小权限建议。
-  ```
-
-## 文档与培训
-- **新成员入门**：
-  ```
-  我正在为新成员编写 onboarding 文档，请基于仓库 README 和 docs 目录，生成一份 5 步的快速开始清单。
-  ```
-- **版本发布说明**：
-  ```
-  根据 docs/process/release-management.md 的流程，为版本 vX.Y.Z 生成发布公告草稿，包括关键变更、升级步骤和注意事项。
+  Review .github/dependabot.yml, suggest improvements, and provide the updated configuration snippet with clear comments.
   ```
 
-## 定制提示
-- 将常用提示维护在本文件，并在更新后通知团队。
-- 与具体语言或框架结合时，可进一步细化上下文限制和输出风格。
-- 若希望直接在 Copilot 客户端中长期保存，可参考 `docs/ai/custom-instructions.md` 提供的模板。
+## Review Assistance
+- **Pull request check**:
+  ```
+  Given the PR description and key diffs below, list additional questions or risks based on the contribution guide and security policy.
+  ```
+- **Workflow risk review**:
+  ```
+  Assess the following GitHub Actions workflow for security concerns, evaluate third-party actions, and recommend least-privilege adjustments.
+  ```
+
+## Documentation & Onboarding
+- **New member onboarding**:
+  ```
+  Create a 5-step quick-start checklist for new contributors based on the repository README and docs directory.
+  ```
+- **Release announcement**:
+  ```
+  Using docs/process/release-management.md, draft a release announcement for version vX.Y.Z covering major changes, upgrade steps, and cautions.
+  ```
+
+## Custom Prompts
+- Maintain shared prompts in this file and notify the team after updates.
+- Tailor prompts for specific languages or frameworks by clarifying context and style expectations.
+- For long-term storage inside the Copilot client, adapt the template in `docs/ai/custom-instructions.md`.

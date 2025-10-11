@@ -1,24 +1,24 @@
-## 概述
-简要描述此 Pull Request 的目的、主要改动以及预期影响。
+## Summary
+Briefly describe the purpose of this pull request, the main changes, and the expected impact.
 
-## 变更内容
-- [ ] 功能实现
-- [ ] 代码重构
-- [ ] 性能优化
-- [ ] 缺陷修复
-- [ ] 文档更新
-- [ ] 测试覆盖
-- [ ] 其他（请补充）：
+## Change Types
+- [ ] Feature
+- [ ] Refactor
+- [ ] Performance
+- [ ] Bug fix
+- [ ] Documentation
+- [ ] Tests
+- [ ] Other (please specify):
 
-## 验证步骤
-描述你执行过的验证步骤（例如本地构建、单元测试、手动验证流程）。
+## Verification Steps
+List the validation steps you performed (e.g., local build, unit tests, manual checks).
 
-## 关联信息
-- 关联的 Issue：
-- 相关的文档或设计链接：
+## Related Information
+- Linked issues:
+- Documentation or design references:
 
-## 风险评估
-- 潜在影响的模块或用户：
-- 回滚方案：
+## Risk Assessment
+- Impacted modules or users:
+- Rollback plan:
 
-> 提示：提交前请确认合并策略、标签和里程碑是否设置正确。
+> Tip: Confirm merge strategy, labels, and milestones before submitting.

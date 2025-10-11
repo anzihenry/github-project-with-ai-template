@@ -1,38 +1,38 @@
-# 安全基线指南
+# Security Baseline Guide
 
-本指南帮助你在使用模版创建新项目时，快速完成安全加固。
+Follow this guide after creating a project from the template to harden security quickly.
 
-## 身份与访问控制
-- 使用最小权限原则：仅为必要成员授予写入或管理员权限。
-- 对管理员启用双重认证，并鼓励团队成员开启。
-- 定期复查团队与集成的访问权限，至少每季度一次。
+## Identity and Access Control
+- Apply least-privilege access: grant write or admin rights only when necessary.
+- Enforce two-factor authentication for administrators and encourage the rest of the team to enable it.
+- Review team and integration permissions at least quarterly.
 
-## 依赖与供应链
-- 保持 `.github/dependabot.yml` 生效，确保 GitHub Actions 依赖及时更新。
-- 对关键 Action 使用固定版本号或 SHA，避免 `@master` 等漂移引用。
-- 若项目包含语言依赖（npm、pip 等），建议增加相应的 Dependabot 配置块。
+## Dependencies and Supply Chain
+- Keep `.github/dependabot.yml` enabled so GitHub Actions dependencies stay current.
+- Pin critical actions by version or SHA; avoid floating references such as `@master`.
+- If your project introduces language-specific dependencies (npm, pip, etc.), add matching Dependabot configurations.
 
-## 机密与凭证
-- 避免将密钥写入仓库，统一通过 GitHub Secrets 或环境变量管理。
-- 周期性轮换密钥，并启用使用日志审计（如 GitHub Audit Log）。
-- 对自动化机器人账号使用细粒度 PAT，并限制在必要仓库范围内。
+## Secrets and Credentials
+- Do not commit secrets to the repository; manage them via GitHub Secrets or environment variables.
+- Rotate credentials on a schedule and enable audit logging where available.
+- Use fine-grained PATs for automation accounts and scope them to required repositories only.
 
-## 检测与响应
-- 启用以下 GitHub Security 功能：
+## Detection and Response
+- Enable GitHub security features:
   - Dependabot alerts
   - Secret scanning
-  - Push Protection（如组织或企业版可用）
-- 启用 CodeQL Code Scanning，并确保 `.github/workflows/codeql.yml` 运行成功、告警及时处理。
-- 将安全通知与团队协作工具集成，确保及时处理。
-- 制定安全事件处理流程，参考 `SECURITY.md` 中的联系方式。
+  - Push Protection (when available)
+- Turn on CodeQL Code Scanning and ensure `.github/workflows/codeql.yml` runs successfully with timely alert triage.
+- Integrate security notifications with your collaboration tools so the team can act quickly.
+- Define an incident response process and reference the contact details in `SECURITY.md`.
 
-## Copilot 相关安全
-- 在 `.copilot/config.json` 中定义敏感区域提示，提醒使用者谨慎处理密钥或个人信息。
-- 对自动生成的配置或脚本，务必人工审查其安全性。
-- 定期更新 `docs/ai` 中的指南，纳入最新的安全策略与案例。
+## Copilot Security Considerations
+- Use `.copilot/config.json` to highlight sensitive areas and remind users to handle secrets with care.
+- Manually review any generated configuration or scripts for security implications.
+- Update the guidance in `docs/ai` regularly as new security strategies or case studies emerge.
 
-## 持续改进
-- 将安全基线纳入 `docs/process/release-management.md` 的发布检查中。
-- 每次版本发布前执行一次安全基线回顾，确保配置未偏离。
-- 定期审查 CodeQL 告警，记录趋势并在回顾中总结改进方案。
-- 鼓励团队提交安全改进建议，并通过 Issue 跟踪落实。
+## Continuous Improvement
+- Include this baseline in the pre-release checklist found in `docs/process/release-management.md`.
+- Conduct a security baseline review ahead of each release to confirm nothing drifted.
+- Track CodeQL alerts over time and summarize action items during retrospectives.
+- Encourage the team to propose security enhancements and document follow-up in issues.

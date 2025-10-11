@@ -1,4 +1,4 @@
-name: CodeQL 安全扫描
+name: CodeQL Security Scan
 
 on:
   push:
@@ -14,7 +14,7 @@ on:
 
 jobs:
   analyze:
-    name: CodeQL 分析
+    name: CodeQL Analysis
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -24,23 +24,23 @@ jobs:
       fail-fast: false
       matrix:
         language: ["javascript-typescript"]
-        # 如需支持更多语言，可添加例如 "python"、"go"、"cpp" 等选项。
+        # Add additional entries like "python", "go", or "cpp" to expand coverage.
 
     steps:
-      - name: 检出仓库
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: 初始化 CodeQL
+      - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          # 如需自定义查询包，可在此处增加 packs: codeql/<lang>-security-extended 等设置。
+          # To load extra query packs, specify entries such as packs: codeql/<lang>-security-extended.
 
-      - name: 自动构建（如适用）
+      - name: Autobuild (if applicable)
         uses: github/codeql-action/autobuild@v3
         continue-on-error: true
 
-      - name: 执行 CodeQL 分析
+      - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{ matrix.language }}"

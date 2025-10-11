@@ -1,52 +1,52 @@
-# CodeQL 工作流使用指南
+# CodeQL Workflow Guide
 
-本指南介绍如何在新项目中启用与定制 CodeQL 扫描，帮助团队持续发现潜在安全漏洞。
+Use this guide to enable and customize CodeQL scanning in new projects so your team can continuously detect security issues.
 
-## 工作流概览
-- 模版已在 `.github/workflows/codeql.yml` 中集成基础的 CodeQL 扫描。
-- 默认触发条件：
-  - 推送到 `main`/`master` 分支。
-  - 针对 `main`/`master` 的 Pull Request。
-  - 每周一次的定时任务（周一 UTC 03:00）。
-- 默认扫描语言矩阵包含 `javascript-typescript`，可按需扩展。
+## Workflow Overview
+- The template includes a baseline CodeQL workflow at `.github/workflows/codeql.yml`.
+- Default triggers:
+  - Pushes to the `main`/`master` branch.
+  - Pull requests targeting `main`/`master`.
+  - A weekly scheduled run (Monday at 03:00 UTC).
+- The default language matrix scans `javascript-typescript`; extend it as needed.
 
-## 启用步骤
-1. 确保仓库在 GitHub.com 的 **Security > Code security and analysis** 中启用了 “CodeQL code scanning”。
-2. 将仓库中的默认分支与团队使用的分支策略保持一致，必要时修改触发分支名单。
-3. 如需更改定时任务频率或时区，更新 `schedule` 段落中的 `cron` 表达式。
+## Enablement Steps
+1. On GitHub.com, ensure **Security > Code security and analysis** has “CodeQL code scanning” enabled.
+2. Align the default branch and workflow triggers with your branching strategy; adjust the trigger list if necessary.
+3. Update the `schedule` cron expression to change frequency or time zone.
 
-## 扩展扫描语言
-- 在工作流的 `matrix.language` 中追加值，例如：
+## Extending Languages
+- Add languages to `matrix.language`, for example:
   ```yaml
   matrix:
     language: ["javascript-typescript", "python", "go"]
   ```
-- 参考 [CodeQL 官方文档](https://docs.github.com/en/code-security/code-scanning) 确认目标语言是否受支持。
-- 若语言需要手动构建（例如 C/C++、Java），请替换或扩展 `autobuild` 步骤，添加自定义构建脚本。
+- Consult the [CodeQL documentation](https://docs.github.com/en/code-security/code-scanning) to verify language support.
+- For languages requiring manual builds (e.g., C/C++, Java), replace or augment the `autobuild` step with your own build commands.
 
-## 自定义查询
-- 通过 `github/codeql-action/init` 的 `packs` 或 `queries` 参数加载额外规则：
+## Custom Queries
+- Load additional rules via the `packs` or `queries` options in `github/codeql-action/init`:
   ```yaml
   with:
     languages: ${{ matrix.language }}
     packs: codeql/<language>-security-extended@latest
   ```
-- 也可在仓库中维护自定义查询集，将其路径传入 `queries` 字段。
+- Maintain custom query packs in the repository and reference them through the `queries` parameter when needed.
 
-## 结果查看与处理
-- 扫描结果会显示在仓库的 **Security > Code scanning alerts** 页面。
-- 建议建立响应流程：
-  - 分配负责人跟进高优先级告警。
-  - 在 PR 中引用告警 ID，说明修复措施。
-  - 对误报可在 GitHub 界面直接标记 False Positive，或在查询中进行排除。
+## Reviewing and Triaging Results
+- Findings appear under **Security > Code scanning alerts** in your repository.
+- Establish a response workflow:
+  - Assign owners to track high-priority alerts.
+  - Reference alert IDs in PRs and describe remediation steps.
+  - Mark false positives directly in GitHub or refine queries to exclude them.
 
-## 与其他安全措施的配合
-- 结合 `docs/github/security-baseline.md` 提供的安全基线，确保 Dependabot、Secret Scanning 等功能已开启。
-- 在 `docs/process/release-management.md` 的发布前检查项中增加“CodeQL 扫描无未解决高风险告警”。
+## Complementary Security Measures
+- Combine this workflow with the security baseline in `docs/github/security-baseline.md` to ensure Dependabot, Secret Scanning, and other protections stay active.
+- Include a “CodeQL scan clear of high-risk alerts” item in the pre-release checklist at `docs/process/release-management.md`.
 
-## 常见问题
-- **工作流耗时较长**：尝试减少语言数量、按需调整查询包，或设置 `fail-fast`。
-- **构建失败**：禁用 `autobuild`，改用显式的 `build` 步骤；确保依赖齐全。
-- **告警过多**：按优先级处理，必要时在团队中明确解决 SLA，并更新自定义查询策略。
+## FAQ
+- **Workflow takes too long**: Reduce the language matrix, trim query packs, or enable `fail-fast`.
+- **Build failures**: Disable `autobuild`, add explicit build steps, and confirm dependencies are available.
+- **Too many alerts**: Prioritize by severity, define resolution SLAs, and refine custom queries when patterns emerge.
 
-配置完成后，请记得在 `docs/github/repo-setup-checklist.md` 中勾选相关步骤，确保新仓库也能正确运行 CodeQL。
+After completing setup, check off the corresponding step in `docs/github/repo-setup-checklist.md` to confirm CodeQL is operational in the new repository.
