@@ -13,6 +13,7 @@
   - 禁止直接推送到默认分支，限制强制推送。
   - 将关键 CI 工作流设为必需状态检查。
 - [ ] 根据需要调整 Issue/PR 模板、Discussion、Projects 等协作功能。
+- [ ] 与团队确认提交信息规范，建议遵循 `docs/github/commit-message-guidelines.md` 并配合工具校验。
 - [ ] 配置团队权限（Maintain、Write、Read），遵循最小权限原则。
 
 ## 自动化与安全

@@ -23,6 +23,7 @@
 - 监控关键指标或用户反馈，及时响应问题。
 - 将经验记录到 `docs/process/post-release-retro.md`（如需新建）。
 - 若发生严重问题，按预案执行回滚。
+- 回顾提交历史：确认遵循 `docs/github/commit-message-guidelines.md`，便于生成变更日志与复盘。
 
 ## 回滚策略
 - 使用 Git 标签快速定位上一个稳定版本。

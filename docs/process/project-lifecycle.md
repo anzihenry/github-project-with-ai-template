@@ -6,6 +6,7 @@
 - 收集需求：使用 Issue 模板记录背景、目标与验收标准。
 - 排期计划：在项目看板或 Milestone 中安排优先级。
 - 技术评估：识别依赖、潜在风险与 Copilot 支持需求。
+- 确认提交规范：团队达成共识并参照 `docs/github/commit-message-guidelines.md`。
 
 ## 2. 开发阶段
 - 创建功能分支并关联 Issue。

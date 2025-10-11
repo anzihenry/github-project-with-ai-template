@@ -24,6 +24,7 @@
 - 贡献与行为准则：`CONTRIBUTING.md`、`CODE_OF_CONDUCT.md`
 
 > 推荐优先阅读 `docs/github/codeql-usage.md`，了解如何为项目配置 CodeQL。
+> 若需统一提交信息格式，请参考 `docs/github/commit-message-guidelines.md`。
 
 ## 适配建议
 - 若项目包含特定技术栈，可在 `.github/workflows/` 中追加对应的构建/测试工作流。
